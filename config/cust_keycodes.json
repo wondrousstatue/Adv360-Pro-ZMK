@@ -1,1 +1,19 @@
-[]
+[
+	{
+		"names": [
+			"double0"
+		],
+		"description": "double0",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	}
+]
