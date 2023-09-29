@@ -30,12 +30,12 @@
                 <&kp>,
                 <&kp>;
         };
-        poundat: poundat {
+        equalsunder: equalsunder {
             compatible = "zmk,behavior-mod-morph";
-            label = "POUNDAT";
+            label = "EQUALSUNDER";
             bindings =
-                <&kp POUND>,
-                <&kp AT>;
+                <&kp EQUAL>,
+                <&kp UNDERSCORE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -116,11 +116,11 @@
 
         default_layer {
             bindings = <
-&none     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mo 1                                                      &mo 1          &kp N6           &kp N7        &kp N8    &kp N9        &kp N0          &kp MINUS
-&kp TAB   &kp J   &kp F   &kp M   &kp P   &kp B   &none                                                      &none          &poundat         &periodcolon  &poundat  &slashterisk  &quotedblquest  &quoteeclam
-&kp ESC   &kp R   &kp S   &kp N   &kp D   &kp W   &none  &kp LCTRL  &kp LALT            &kp LGUI  &kp RCTRL  &none          &commasemicolon  &kp A         &kp E     &kp I         &kp H           &none
-&kp CAPS  &kp X   &kp G   &kp V   &kp C   &kp Z                     &none               &none                               &dashplus        &kp U         &kp O     &kp Y         &kp K           &none
-&mo 2     &none   &none   &none   &none           &kp L  &kp T      &kp LEFT_SHIFT      &mo 2     &kp SPACE  &kp BACKSPACE                   &none         &none     &none         &none           &mo 2
+&none     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mo 1                                                      &mo 1          &kp N6           &kp N7        &kp N8        &kp N9        &kp N0          &kp MINUS
+&kp TAB   &kp J   &kp F   &kp M   &kp P   &kp B   &none                                                      &none          &equalsunder     &periodcolon  &equalsunder  &slashterisk  &quotedblquest  &quoteeclam
+&kp ESC   &kp R   &kp S   &kp N   &kp D   &kp W   &none  &kp LCTRL  &kp LALT            &kp LGUI  &kp RCTRL  &none          &commasemicolon  &kp A         &kp E         &kp I         &kp H           &none
+&kp CAPS  &kp X   &kp G   &kp V   &kp C   &kp Z                     &none               &none                               &dashplus        &kp U         &kp O         &kp Y         &kp K           &none
+&mo 2     &none   &none   &none   &none           &kp L  &kp T      &kp LEFT_SHIFT      &mo 2     &kp SPACE  &kp BACKSPACE                   &none         &none         &none         &none           &mo 2
             >;
         };
 
@@ -141,6 +141,16 @@
 &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_EQUAL  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER                  &trans      &trans                  &trans          &trans        &trans          &trans           &trans  &trans
 &trans  &trans  &kp KP_NUMBER_0  &macro_dzero     &trans                         &trans  &trans  &trans      &trans  &trans  &trans                  &trans        &trans          &trans           &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans            &trans             &trans          &trans           &trans  &trans                                      &trans  &trans  &trans                &trans                 &trans         &trans            &trans
+&trans  &trans            &trans             &trans          &trans           &trans  &trans                                      &trans  &trans  &trans                &trans                 &trans         &trans            &trans
+&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &trans
+&trans  &trans            &trans             &trans          &trans           &trans                  &trans      &trans                  &trans  &trans                &trans                 &trans         &trans            &trans
+&trans  &trans            &trans             &trans          &trans                   &trans  &trans  &trans      &trans  &trans  &trans          &trans                &trans                 &trans         &trans            &trans
             >;
         };
     };
