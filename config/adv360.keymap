@@ -122,16 +122,25 @@
         };
     };
 
+    macros {
+        dbl0: dbl0 {
+            compatible = "zmk,behavior-macro";
+            label = "DBL0";
+            #binding-cells = <0>;
+            bindings = <&kp KP_NUMBER_0 &kp KP_NUMBER_0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&none     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mo 1                                                      &mo 1     &kp N6           &kp N7        &kp N8        &kp N9        &kp N0          &kp MINUS
-&kp TAB   &kp J   &kp F   &kp M   &kp P   &kp B   &none                                                      &none     &equalsunder     &periodcolon  &equalsunder  &slashterisk  &quotedblquest  &quoteeclam
-&kp ESC   &kp R   &kp S   &kp N   &kp D   &kp W   &none  &kp LCTRL  &kp LALT            &kp LGUI  &kp RCTRL  &none     &commasemicolon  &kp A         &kp E         &kp I         &kp H           &none
-&kp CAPS  &kp X   &kp G   &kp V   &kp C   &kp Z                     &none               &mo 3                          &dashplus        &kp U         &kp O         &kp Y         &kp K           &none
-&mo 2     &none   &none   &none   &none           &kp L  &kp T      &kp LEFT_SHIFT      &mo 2     &kp SPACE  &backdel                   &none         &none         &none         &none           &mo 2
+&none     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mo 1                                                       &mo 1     &kp N6           &kp N7        &kp N8        &kp N9          &kp N0       &none
+&kp TAB   &kp J   &kp F   &kp M   &kp P   &kp B   &none                                                       &none     &equalsunder     &periodcolon  &slashterisk  &quotedblquest  &quoteeclam  &none
+&kp ESC   &kp R   &kp S   &kp N   &kp D   &kp W   &none  &kp LCTRL  &kp LALT            &kp LGUI   &kp RCTRL  &none     &commasemicolon  &kp A         &kp E         &kp I           &kp H        &kp ENTER
+&kp CAPS  &kp X   &kp G   &kp V   &kp C   &kp Z                     &mo 2               &mo 3                           &dashplus        &kp U         &kp O         &kp Y           &kp K        &none
+&mo 2     &none   &none   &none   &none           &kp L  &kp T      &kp LEFT_SHIFT      &kp RSHFT  &kp SPACE  &backdel                   &none         &none         &none           &none        &mo 2
             >;
         };
 
@@ -151,7 +160,7 @@
 &trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS   &trans                                      &trans  &trans          &trans        &trans          &trans           &trans  &trans
 &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_EQUAL  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER                  &trans      &trans                  &trans          &trans        &trans          &trans           &trans  &trans
-&trans  &trans  &kp KP_NUMBER_0  &macro_dzero     &trans                         &trans  &trans  &trans      &trans  &trans  &trans                  &trans        &trans          &trans           &trans  &trans
+&trans  &trans  &kp KP_NUMBER_0  &dbl0            &trans                         &trans  &trans  &trans      &trans  &trans  &trans                  &trans        &trans          &trans           &trans  &trans
             >;
         };
 
