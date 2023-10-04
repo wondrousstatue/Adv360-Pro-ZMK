@@ -136,11 +136,11 @@
 
         default_layer {
             bindings = <
-&none     &kp N1          &kp N2      &kp N3       &kp N4       &kp N5  &mo 1                                                       &mo 1     &kp N6           &kp N7        &kp N8        &kp N9          &kp N0       &none
-&kp TAB   &kp J           &kp F       &kp M        &kp P        &kp B   &none                                                       &none     &equalsunder     &kp U         &kp O         &kp Y           &kp K        &none
-&kp ESC   &hm LEFT_GUI R  &hm LALT S  &hm LCTRL N  &hm D LSHFT  &kp W   &none  &kp LCTRL  &kp LALT            &kp LGUI   &kp RCTRL  &none     &commasemicolon  &hm LSHFT A   &hm RCTRL E   &hm RALT I      &hm LGUI H   &kp ENTER
-&kp CAPS  &kp X           &kp G       &kp V        &kp C        &kp Z                     &mo 2               &mo 3                           &dashplus        &periodcolon  &slashterisk  &quotedblquest  &quoteeclam  &none
-&mo 2     &none           &none       &none        &none                &kp L  &kp T      &kp LEFT_SHIFT      &kp RSHFT  &kp SPACE  &backdel                   &none         &none         &none           &none        &mo 2
+&none     &kp N1          &kp N2      &kp N3       &kp N4       &kp N5  &mo 1                                                  &mo 1     &kp N6           &kp N7        &kp N8        &kp N9          &kp N0       &none
+&kp TAB   &kp J           &kp F       &kp M        &kp P        &kp B   &none                                                  &none     &equalsunder     &kp U         &kp O         &kp Y           &kp K        &none
+&kp ESC   &hm LEFT_GUI R  &hm LALT S  &hm LCTRL N  &hm LSHFT D  &kp W   &none  &kp LCTRL  &kp LALT       &kp LGUI   &kp RCTRL  &none     &commasemicolon  &hm LSHFT A   &hm RCTRL E   &hm RALT I      &hm LGUI H   &kp ENTER
+&kp CAPS  &kp X           &kp G       &kp V        &kp C        &kp Z                     &mo 2          &mo 3                           &dashplus        &periodcolon  &slashterisk  &quotedblquest  &quoteeclam  &none
+&mo 2     &none           &none       &none        &none                &kp L  &kp T      &sk LSHFT      &sk RSHFT  &kp SPACE  &backdel                   &none         &none         &none           &none        &mo 2
             >;
         };
 
