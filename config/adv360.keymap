@@ -23,19 +23,14 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
         equalsunder: equalsunder {
             compatible = "zmk,behavior-mod-morph";
             label = "EQUALSUNDER";
-            bindings =
-                <&kp EQUAL>,
-                <&kp UNDERSCORE>;
+            bindings = <&kp EQUAL>, <&kp UNDERSCORE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -43,9 +38,7 @@
         periodcolon: periodcolon {
             compatible = "zmk,behavior-mod-morph";
             label = "PERIODCOLON";
-            bindings =
-                <&kp PERIOD>,
-                <&kp COLON>;
+            bindings = <&kp PERIOD>, <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -53,9 +46,7 @@
         slashterisk: slashterisk {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASHTERISK";
-            bindings =
-                <&kp SLASH>,
-                <&kp ASTERISK>;
+            bindings = <&kp SLASH>, <&kp ASTERISK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -63,9 +54,7 @@
         quotedblquest: quotedblquest {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTEDBLQUEST";
-            bindings =
-                <&kp DOUBLE_QUOTES>,
-                <&kp QUESTION>;
+            bindings = <&kp DOUBLE_QUOTES>, <&kp QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -73,9 +62,7 @@
         quoteeclam: quoteeclam {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTEECLAM";
-            bindings =
-                <&kp SINGLE_QUOTE>,
-                <&kp EXCLAMATION>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp EXCLAMATION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -83,9 +70,7 @@
         commasemicolon: commasemicolon {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMASEMICOLON";
-            bindings =
-                <&kp COMMA>,
-                <&kp SEMICOLON>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -93,9 +78,7 @@
         dashplus: dashplus {
             compatible = "zmk,behavior-mod-morph";
             label = "DASHPLUS";
-            bindings =
-                <&kp MINUS>,
-                <&kp PLUS>;
+            bindings = <&kp MINUS>, <&kp PLUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -103,9 +86,7 @@
         backdel: backdel {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKDEL";
-            bindings =
-                <&kp BACKSPACE>,
-                <&kp DEL>;
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
