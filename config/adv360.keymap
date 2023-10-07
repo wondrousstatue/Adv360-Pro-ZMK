@@ -19,16 +19,15 @@
     behaviors {
         #include "macros.dtsi"
 
-        hm: homerow_mods {
+        lhm: lhomerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "LHOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <200>;
-            retro-tap;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 46 47 48 49 50 51 60 61 62 63 64 65 66 35 36 52 66 67>;
         };
         equalsunder: equalsunder {
             compatible = "zmk,behavior-mod-morph";
@@ -95,6 +94,16 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RCTL|MOD_LCTL)>;
         };
+        rhm: rhomerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RHOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <37 7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
+        };
     };
 
     combos {
@@ -120,11 +129,11 @@
 
         default_layer {
             bindings = <
-&none     &kp N1          &kp N2      &kp N3       &kp N4       &kp N5  &mo 1                                                  &mo 1     &kp N6           &kp N7        &kp N8        &kp N9          &kp N0       &none
-&kp TAB   &kp J           &kp F       &kp M        &kp P        &kp B   &none                                                  &none     &equalsunder     &kp U         &kp O         &kp Y           &kp K        &none
-&kp ESC   &hm LEFT_GUI R  &hm LALT S  &hm LCTRL N  &hm LSHFT D  &kp W   &none  &kp LCTRL  &kp LALT       &kp LGUI   &kp RCTRL  &none     &commasemicolon  &hm LSHFT A   &hm RCTRL E   &hm RALT I      &hm LGUI H   &kp ENTER
-&kp CAPS  &kp X           &kp G       &kp V        &kp C        &kp Z                     &mo 2          &mo 3                           &dashplus        &periodcolon  &slashterisk  &quotedblquest  &quoteeclam  &none
-&mo 2     &none           &none       &none        &none                &kp L  &kp T      &sk LSHFT      &sk RSHFT  &kp SPACE  &backdel                   &none         &none         &none           &none        &mo 2
+&none     &kp N1           &kp N2       &kp N3        &kp N4        &kp N5  &mo 1                                                  &mo 1     &kp N6           &kp N7              &kp N8        &kp N9            &kp N0        &none
+&kp TAB   &kp J            &kp F        &kp M         &kp P         &kp B   &none                                                  &none     &equalsunder     &kp U               &kp O         &kp Y             &kp K         &none
+&kp ESC   &lhm LEFT_GUI R  &lhm LALT S  &lhm LCTRL N  &lhm LSHFT D  &kp W   &none  &kp LCTRL  &kp LALT       &kp LGUI   &kp RCTRL  &none     &commasemicolon  &rhm RIGHT_SHIFT A  &rhm RCTRL E  &rhm RIGHT_ALT I  &rhm RMETA H  &kp ENTER
+&kp CAPS  &kp X            &kp G        &kp V         &kp C         &kp Z                     &mo 2          &mo 3                           &dashplus        &periodcolon        &slashterisk  &quotedblquest    &quoteeclam   &none
+&mo 2     &none            &none        &none         &none                 &kp L  &kp T      &sk LSHFT      &sk RSHFT  &kp SPACE  &backdel                   &none               &none         &none             &none         &mo 2
             >;
         };
 
