@@ -26,6 +26,9 @@
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <200>;
+            retro-tap;
         };
         equalsunder: equalsunder {
             compatible = "zmk,behavior-mod-morph";
