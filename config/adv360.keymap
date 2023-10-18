@@ -113,7 +113,32 @@
 
         q {
             bindings = <&kp Q>;
-            key-positions = <25 26>;
+            key-positions = <25 24>;
+        };
+
+        chombo {
+            bindings = <&chombo>;
+            key-positions = <50 49>;
+        };
+
+        whombo {
+            bindings = <&whombo>;
+            key-positions = <51 49>;
+        };
+
+        shombo {
+            bindings = <&shombo>;
+            key-positions = <30 49>;
+        };
+
+        gombo {
+            bindings = <&ghombo>;
+            key-positions = <48 49>;
+        };
+
+        z {
+            bindings = <&kp Z>;
+            key-positions = <16 17>;
         };
     };
 
@@ -124,6 +149,36 @@
             #binding-cells = <0>;
             bindings = <&kp KP_NUMBER_0 &kp KP_NUMBER_0>;
         };
+        thorn: thorn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp H>;
+            label = "THORN";
+        };
+        chombo: chombo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp H>;
+            label = "CHOMBO";
+        };
+        whombo: whombo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp W &kp H>;
+            label = "WHOMBO";
+        };
+        shombo: shombo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp H>;
+            label = "SHOMBO";
+        };
+        ghombo: ghombo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp H>;
+            label = "GHOMBO";
+        };
     };
 
     keymap {
@@ -132,9 +187,9 @@
         default_layer {
             bindings = <
 &none     &kp N1           &kp N2       &kp N3        &kp N4        &kp N5  &mo 1                                                  &mo 1     &kp N6           &kp N7              &kp N8        &kp N9            &kp N0        &none
-&kp TAB   &kp J            &kp F        &kp M         &kp P         &kp B   &none                                                  &none     &equalsunder     &kp U               &kp O         &kp Y             &kp K         &none
-&kp ESC   &lhm LEFT_GUI R  &lhm LALT S  &lhm LCTRL N  &lhm LSHFT D  &kp W   &none  &kp LCTRL  &kp LALT       &kp LGUI   &kp RCTRL  &none     &commasemicolon  &rhm RIGHT_SHIFT A  &rhm RCTRL E  &rhm RIGHT_ALT I  &rhm RMETA H  &kp ENTER
-&kp CAPS  &kp X            &kp G        &kp V         &kp C         &kp Z                     &mo 2          &mo 3                           &dashplus        &periodcolon        &slashterisk  &quotedblquest    &quoteeclam   &none
+&kp TAB   &kp J            &kp F        &kp M         &kp P         &kp V   &none                                                  &none     &equalsunder     &kp U               &kp O         &kp Y             &kp K         &none
+&kp ESC   &lhm LEFT_GUI R  &lhm LALT S  &lhm LCTRL N  &lhm LSHFT D  &kp B   &none  &kp LCTRL  &kp LALT       &kp LGUI   &kp RCTRL  &none     &commasemicolon  &rhm RIGHT_SHIFT A  &rhm RCTRL E  &rhm RIGHT_ALT I  &rhm RMETA H  &kp ENTER
+&kp CAPS  &kp X            &kp G        &thorn        &kp C         &kp W                     &mo 2          &mo 3                           &dashplus        &periodcolon        &slashterisk  &quotedblquest    &quoteeclam   &none
 &mo 2     &none            &none        &none         &none                 &kp L  &kp T      &sk LSHFT      &sk RSHFT  &kp SPACE  &backdel                   &none               &none         &none             &none         &mo 2
             >;
         };
