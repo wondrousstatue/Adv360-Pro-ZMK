@@ -113,7 +113,7 @@
 
         q {
             bindings = <&kp Q>;
-            key-positions = <25 24>;
+            key-positions = <25 26>;
         };
 
         chombo {
@@ -138,7 +138,7 @@
 
         z {
             bindings = <&kp Z>;
-            key-positions = <16 17>;
+            key-positions = <16 15>;
         };
     };
 
