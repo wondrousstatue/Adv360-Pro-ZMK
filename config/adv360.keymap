@@ -30,6 +30,7 @@
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
             retro-tap;
         };
+
         equalsunder: equalsunder {
             compatible = "zmk,behavior-mod-morph";
             label = "EQUALSUNDER";
@@ -38,6 +39,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         periodcolon: periodcolon {
             compatible = "zmk,behavior-mod-morph";
             label = "PERIODCOLON";
@@ -46,6 +48,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         slashterisk: slashterisk {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASHTERISK";
@@ -54,6 +57,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         quotedblquest: quotedblquest {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTEDBLQUEST";
@@ -62,6 +66,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         quoteeclam: quoteeclam {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTEECLAM";
@@ -70,6 +75,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         commasemicolon: commasemicolon {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMASEMICOLON";
@@ -78,6 +84,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         dashplus: dashplus {
             compatible = "zmk,behavior-mod-morph";
             label = "DASHPLUS";
@@ -86,6 +93,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         backdel: backdel {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKDEL";
@@ -95,6 +103,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RCTL|MOD_LCTL)>;
         };
+
         rhm: rhomerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "RHOMEROW_MODS";
@@ -149,30 +158,35 @@
             #binding-cells = <0>;
             bindings = <&kp KP_NUMBER_0 &kp KP_NUMBER_0>;
         };
+
         thorn: thorn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp T &kp H>;
             label = "THORN";
         };
+
         chombo: chombo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp C &kp H>;
             label = "CHOMBO";
         };
+
         whombo: whombo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp W &kp H>;
             label = "WHOMBO";
         };
+
         shombo: shombo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp S &kp H>;
             label = "SHOMBO";
         };
+
         ghombo: ghombo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -187,9 +201,9 @@
         default_layer {
             bindings = <
 &none     &kp N1           &kp N2       &kp N3        &kp N4        &kp N5  &mo 1                                                  &mo 1     &kp N6           &kp N7              &kp N8        &kp N9            &kp N0        &none
-&kp TAB   &kp J            &kp F        &kp M         &kp P         &kp V   &none                                                  &none     &equalsunder     &kp U               &kp O         &kp Y             &kp K         &none
-&kp ESC   &lhm LEFT_GUI R  &lhm LALT S  &lhm LCTRL N  &lhm LSHFT D  &kp B   &none  &kp LCTRL  &kp LALT       &kp LGUI   &kp RCTRL  &none     &commasemicolon  &rhm RIGHT_SHIFT A  &rhm RCTRL E  &rhm RIGHT_ALT I  &rhm RMETA H  &kp ENTER
-&kp CAPS  &kp X            &kp G        &thorn        &kp C         &kp W                     &mo 2          &mo 3                           &dashplus        &periodcolon        &slashterisk  &quotedblquest    &quoteeclam   &none
+&kp TAB   &kp J            &kp F        &kp M         &kp P         &kp B   &none                                                  &none     &equalsunder     &kp U               &kp O         &kp Y             &kp K         &none
+&kp ESC   &lhm LEFT_GUI R  &lhm LALT S  &lhm LCTRL N  &lhm LSHFT D  &kp W   &none  &kp LCTRL  &kp LALT       &kp LGUI   &kp RCTRL  &none     &commasemicolon  &rhm RIGHT_SHIFT A  &rhm RCTRL E  &rhm RIGHT_ALT I  &rhm RMETA H  &kp ENTER
+&kp CAPS  &kp X            &kp G        &thorn        &kp C         &kp V                     &mo 2          &mo 3                           &dashplus        &periodcolon        &slashterisk  &quotedblquest    &quoteeclam   &none
 &mo 2     &none            &none        &none         &none                 &kp L  &kp T      &sk LSHFT      &sk RSHFT  &kp SPACE  &backdel                   &none               &none         &none             &none         &mo 2
             >;
         };
